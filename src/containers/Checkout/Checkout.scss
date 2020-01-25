@@ -1,0 +1,132 @@
+.checkout {
+  display: flex;
+
+  ul {
+    list-style: none;
+    li {
+      list-style: none;
+    }
+  }
+
+  .checkoutLeft {
+    max-width: 800px;
+    width: 100%;
+    padding: 10px;
+
+    .checkoutList {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+
+      .image {
+        width: 100px;
+      }
+
+      .itemDetail {
+        width: 200px;
+        text-align: left;
+      }
+
+      .itemPrice {
+        margin: 5px 0;
+
+        ul {
+          list-style: none;
+          li {
+            list-style: none;
+            display: inline-block;
+            padding: 5px;
+
+            &:nth-child(2) {
+              text-decoration: line-through;
+            }
+            &:nth-child(3) {
+              color: green;
+            }
+          }
+        }
+      }
+
+      .itemCount {
+        width: 100px;
+        display: flex;
+
+        .itemPlusMinus {
+          width: 20px;
+          height: 20px;
+          border: 1px solid #ccc;
+          text-align: center;
+          border-radius: 20px;
+          margin: 5px;
+          align-items: center;
+          cursor: pointer;
+          span {
+            margin-top: -3px;
+            display: block;
+          }
+        }
+
+        .itemNum {
+          width: 30px;
+          height: 20px;
+          border: 1px solid #ccc;
+          text-align: center;
+          margin: 5px;
+          align-items: center;
+          span {
+            margin-top: -1px;
+            display: block;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .itemRemove {
+        width: 100px;
+        text-align: center;
+      }
+    }
+  }
+
+  .checkoutRight {
+    width: 200px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background: #fff;
+
+    .crTitle {
+      font-size: 14px;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+      padding: 5px 5px 10px;
+      color: #333;
+    }
+
+    .priceDiscount {
+      ul {
+        // display: flex;
+        li {
+          display: flex;
+          text-align: left;
+          padding: 10px;
+          font-size: 14px;
+          span {
+            display: block;
+            width: 50%;
+          }
+          span:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .totalPrice {
+      border-top: 1px solid #ccc;
+      font-weight: bold;
+      @extend .priceDiscount;
+    }
+  }
+}

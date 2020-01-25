@@ -1,0 +1,123 @@
+.contentBody {
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+
+  .leftFilters {
+    width: 200px;
+    border-right: 1px solid #eee;
+    padding: 10px;
+
+    .filterTitle {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .rangeSection {
+      margin-top: 50px;
+      padding: 0 20px;
+    }
+
+    .rangeLabel {
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #999;
+    }
+
+    .filterBtn {
+      background: #4269ea;
+      color: #fff;
+      width: 100px;
+      margin: 20px auto;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .rightSection {
+    padding: 20px;
+    width: calc(100% - 202px);
+
+    .sort {
+      display: flex;
+
+      .sortList {
+        list-style-type: none;
+
+        li {
+          list-style: none;
+          padding: 10px 20px;
+          display: inline-block;
+
+          span {
+            color: #999;
+            cursor: pointer;
+
+            &:hover,
+            .active {
+              color: #4269ea;
+              border-bottom: 1px solid #4269ea;
+            }
+          }
+
+          &:first-child {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .itemList {
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .item {
+        width: 180px;
+        margin: 0 0 20px 0;
+        background: #f3f3f3;
+        box-shadow: 0px 2px 5px #ccc;
+        img {
+          min-width: 100%;
+          min-height: 200px;
+          background: #eee;
+        }
+        .itemPrice {
+          margin: 5px 0;
+
+          ul {
+            list-style: none;
+            li {
+              list-style: none;
+              display: inline-block;
+              padding: 5px;
+
+              &:nth-child(2) {
+                text-decoration: line-through;
+              }
+              &:nth-child(3) {
+                color: green;
+              }
+            }
+          }
+        }
+        .addButton {
+          width: 100px;
+          text-align: center;
+          padding: 10px;
+          background: #f7ad22;
+          margin: 5px auto;
+          border-radius: 20px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
